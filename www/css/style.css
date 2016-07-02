@@ -1,1 +1,146 @@
-codigo css
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block}
+mark, rp, rt, ruby, summary, time {display:inline}
+/* Left & Right alignment */
+.left  {float:left}
+.right  {float:right}
+.wrapper {width:100%;overflow:hidden}
+/* Global properties ======================================================== */
+body {
+	/*background:url(../images/bg_top.gif) 0 0 repeat-x #fff;*/
+	background:#FFFFFF;
+	border:0;
+	color:#808080;
+	line-height:24px;
+	min-width:980px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
+.css3{border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
+/* Global Structure ============================================================= */
+.main {border:#000000 1px solid; margin:0 auto;width:960px;position:relative}
+.bg1 {background:white}
+/* ============================= main layout ====================== */
+a {color:#5f870e;text-decoration:none;outline:none}
+a:hover {color:#fff}
+h1 {padding:39px 0 0 9px;float:left}
+h2 {font-size:33px;color:#fff;font-weight:700;line-height:1.2em;padding:30px 0 11px 0;letter-spacing:-1px}
+h3 {font-size:27px;color:#fff;font-weight:700;line-height:1.2em;padding:33px 0 17px 0;letter-spacing:-1px}
+h3.color1 {padding:0 0 7px 0}
+p {padding-bottom:24px}
+/* ============================= header ====================== */
+.header-index {height:179px}
+#page1 header {height:662px}
+#logo {display:block;text-indent:-9999px;background:url(../images/logoInstituto2.png) 0 0 no-repeat;width:590px;height:70px}
+#status {float:right;padding:50px 10px 0 0 }
+/*#status .bg {background:url(../images/search.png) 0 0 no-repeat;width:220px;height:23px}
+#status .bg {width:220px;height:20px}
+#status .input {background:none;padding:3px 13px;font:14px Arial, Helvetica, sans-serif;color:#000;height:17px;width:194px;margin:0}*/
+#menu  {padding-top:30px}
+#menu > li  {float:left;padding-right:5px}
+#menu .last {padding-right:0px}
+#menu > li > a {width:188px;display:block;font-size:17px;color:#fff;text-transform:uppercase;font-weight:400;height:61px;line-height:58px;border-top:1px solid #FFFFFF;background:#000;text-align:center;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;position:relative}
+#menu > li > a:hover, #menu > .active > a {background:#5f870e;border-color:#9cba2f}
+#menu > li > a span {display:block;position:relative}
+#slider {position:absolute;top:199px;left:1px;width:100%;height:467px;overflow:hidden;z-index:1}
+.items {display:none}
+.pagination {position:absolute;bottom:82px;right:274px;z-index:2}
+.pagination li {float:left;padding-left:3px}
+.pagination a {display:block;width:17px;height:17px;background:url(../images/buttons.png) right 0 no-repeat;text-indent:-9999px}
+.pagination a:hover, .pagination .current a {background-position:left}
+.banner {position:absolute;top:87px;z-index:2;right:32px;color:#a0a0a0;width:350px}
+.title {font-size:47px;line-height:1.2em;letter-spacing:-2px;display:block;padding-bottom:9px}
+.title .color2 {color:#000}
+.title span {display:block;margin-top:-17px}
+.banner .button1 {font-size:28px;padding:0 24px;height:49px;line-height:46px;margin-top:-1px;letter-spacing:-2px}
+.banner .button1:hover {background:#FFFFFF;color:#fff}
+.signature {text-align:right;display:block;color:#5f870e;line-height:20px;padding-top:6px}
+.signature strong {display:block;color:#fff}
+/* ============================= content ====================== */
+/*#content, #content2 {padding:0 20px}
+#content {padding-bottom:9px}
+#content2 {padding-bottom:21px}
+.pad_bot1 {padding-bottom:12px}
+.marg_right1 {margin-right:40px}
+.marg_right2 {margin-right:20px}
+.no_pad { padding-bottom:0}
+.color1 {color:#5f870e}
+.color2 {color:#fff}
+.button1 {display:inline-block;font-size:22px;color:#fff;padding:0 18px;background:#5f870e;height:45px;line-height:44px;position:relative;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;letter-spacing:-1px;margin-top:-4px}
+.button1:hover {background:#fff;color:#000}
+.list1{}
+.list1 a {color:#808080;padding-left:15px;background:url(../images/marker_1.png) 0 5px no-repeat}
+.list1 a:hover {color:#5f870e}
+.list2{}
+.list2 li {padding-left:15px;background:url(../images/marker_1.png) 0 9px no-repeat;padding-bottom:12px}
+figure {padding-top:2px}
+.dropcap_1 {float:left;background:url(../images/dropcap_1.png) 0 0 no-repeat;width:45px;height:45px;text-align:center;font-size:33px;line-height:42px;color:#fff;font-weight:700;margin-right:15px;margin-top:2px;margin-bottom:10px}
+.address span {float:left;width:88px}
+.address a {text-decoration:underline}*/
+/* ============================= footer ====================== */
+footer  {padding:49px 20px 0;height:98px}
+footer a {color:#000}
+footer a:hover {color:#fff}
+#icons {width:185px;float:right}
+#icons li {float:left;padding-right:10px}
+#icons .first {float:none;font-size:23px;color:#808080;font-weight:400;line-height:1.2em;margin-top:-7px;letter-spacing:-1px;padding-bottom:9px}
+/* Tooltips */
+.aToolTip  {background:#5f870e;color:#fff;	margin:0;padding:2px 10px 3px;font-size:12px;line-height:1.2em;position:absolute}
+.aToolTip .aToolTipContent  {position:relative;	margin:0;padding:0}
+/* ============================= forms ============================= */
+#ContactForm {margin-top:-2px}
+#ContactForm .wrapper {overflow:inherit;min-height:30px;line-height:26px}
+#ContactForm .textarea_box {min-height:189px}
+#ContactForm  span {float:left;width:80px}
+#ContactForm a {margin-left:15px;float:right;width:124px;padding:0;text-align:center}
+#ContactForm .input  {margin:0;width:420px;height:18px;background:none;padding:4px 10px;color:#000;font:14px Arial, Helvetica, sans-serif}
+#ContactForm textarea  {overflow:auto;width:820px;height:160px;background:none;padding:4px 10px;color:#000;font:14px Arial, Helvetica, sans-serif;margin:0}
+#ContactForm  .bg {background:#fff; position:relative;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;float:left}
+
+
+/*LOGIN*/
+/*
+http://www.freshdesignweb.com/beautiful-registration-form-with-html5-and-css3.html
+*/
+
+.form{
+	background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
+}
+.form fieldset{border:0px; padding:0px; margin:0px;}
+.form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+
+.form input[type="text"] { width: 400px; }
+.form input[type="email"] { width: 400px; }
+.form input[type="password"] { width: 400px; }
+.form input.birthday{width:60px;}
+.form input.birthyear{width:120px;}
+.form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.form label.month {width: 135px;}
+.form input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.form input:focus, textarea:focus { border: 1px solid #ff5400; background-color: rgba(255, 255, 255, 1); }
+.form .select-style {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(images/select-arrow.png), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.form .gender {
+  width:410px;
+  }
+.form input.buttom{ background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form input.buttom:hover	{ background-color: #2a78f6; }

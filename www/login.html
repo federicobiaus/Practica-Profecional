@@ -35,34 +35,63 @@ body {
 }
 -->
 </style></head>
-	<body id="page1">
-		<div class="main">
-		<!--header -->
-			<header class="header-index">
-				<div class="wrapper">
-					<h1><a href="index.html" id="logo">logo</a></h1>
-					<form id="status" method="post">
-						<fieldset>
-							<div>Info del usuario logueado - logout</div>
-						</fieldset>
-					</form>
-				</div>
-				<nav>
-					<ul id="menu">
-						<li class="active"><a href="index.html"><span>Inicio</span></a></li>
-						<li><a href="Company.html"><span>Asistencias</span></a></li>
-						<li><a href="Solutions.html"><span>Libro de temas</span></a></li>
-						<li><a href="Services.html"><span>Evaluaciones</span></a></li>
-						<li class="last"><a href="Contacts.html"><span>Contacto</span></a></li>
-					</ul>
-				</nav>
-				<div id="slider">	DATA ACA		</div>
-			</header>
-			<!--header end-->
-		<!--content -->
+<body id="page2">
+	<div class="main">
+	  <!--header -->
+		<header id="header-login">
+			<div class="wrapper">
+				<h1><a href="index.html" id="logo">logo</a></h1>
+		  </div>
+		</header>
+		<!--header end-->
+	  <!--content -->
+	  <br><br>
+	  			  <div  class="form">
+				  <form id="contactform">
+					  <p class="contact"><label for="name">Nombre</label></p>
+					  <input id="name" name="name" placeholder="Primer y segundo nombre" required="" tabindex="1" type="text">
+					  <p class="contact"><label for="email">Email</label></p>
+					  <input id="email" name="email" placeholder="ejemplo@domain.com" required="" type="email">
+					  <p class="contact"><label for="username">Nombre de usuario</label></p>
+					  <input id="username" name="username" placeholder="username" required="" tabindex="2" type="text">
+					  <p class="contact"><label for="password">Contraseña</label></p>
+					  <input type="password" id="password" name="password" required="" type="text">
+					  <p class="contact"><label for="repassword">Confirmar contraseña</label></p>
+					  <input type="password" id="password" name="password" required="" type="text">
+				     <fieldset>
+					   <label>Fecha de nacimiento</label>
+					    <label class="month">
+					    <select class="select-style" name="BirthMonth">
+					    <option value="">Mes</option>
+					    <option  value="01">Enero</option>
+					    <option value="02">Febrero</option>
+					    <option value="03" >Marzo</option>
+					    <option value="04">Abril</option>
+					    <option value="05">Mayo</option>
+					    <option value="06">Junio</option>
+					    <option value="07">Julio</option>
+					    <option value="08">Agosto</option>
+					    <option value="09">Septiembre</option>
+					    <option value="10">Octubre</option>
+					    <option value="11">Noviembre</option>
+					    <option value="12" >Deciembre</option>
+					    </label>
+					   </select>   
+					  <label>Dia<input class="birthday" maxlength="2" name="BirthDay"  placeholder="Day" required=""></label>
+				     <label>Año <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label>
+			        </fieldset>
+				     <p>
+				     <table width="200px" style="width:100%;">
+					 <tr>
+				       <td width="49%" align="center"><input class="buttom" name="submit" id="submit" tabindex="5" value="Registrarme!" type="submit"></td><td width="2%"> </td>
+			           <td width="49%" align="center"><input class="buttom" name="submit" id="submit" tabindex="5" value="Loguearme!" type="submit"></td>   
+  					 </tr>
+				    </table>
+				     </p>                    
+			        </form>
 		</div>
-		<div class="bg1">	<!-- Otra seccion eliminar si no sirve-->
-		</div>
+		<br><br>
+    </div>
 		<div class="main">
 		<!--content end-->
 		<!--footer -->
@@ -99,5 +128,5 @@ body {
 					})
 			})
 		</script>
-	</body>
+</body>
 </html>
