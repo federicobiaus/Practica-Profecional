@@ -2,6 +2,7 @@ CREATE TABLE `usuarios` (
   `UserId` int(11) NOT NULL DEFAULT '0',
   `Nombre` varchar(50) NOT NULL,
   `Apellido` varchar(50) NOT NULL,
+  `email` varchar(60) NOT NULL,
   `Usuario` varchar(50) NOT NULL,
   `pw` varchar(20) NOT NULL,
   `FechaAlta` datetime NOT NULL,

@@ -3,6 +3,7 @@
 <head>
 <title>AutoGestión - ISFT179 "Dr. Carlos Pellegrini"</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
@@ -59,24 +60,24 @@ body {
 			<p class="contact">
 				<label for="email">Email</label>
 			</p>
-			<input id="email" name="email" placeholder="ejemplo@domain.com" required="" type="email">
+			<input id="email" name="email" placeholder="ejemplo@domain.com" required="" tabindex="2" type="email">
 			<p class="contact">
 				<label for="username">Nombre de usuario</label>
 			</p>
-			<input id="username" name="username" placeholder="username" required="" tabindex="2" type="text">
+			<input id="username" name="username" placeholder="Username" required="" tabindex="3" type="text">
 			<p class="contact">
 				<label for="password">Contraseña</label>
 			</p>
-			<input type="password" id="password" name="password" required="" type="text">
+			<input type="password" id="password" placeholder="Password" required="" tabindex="4">
 			<p class="contact">
-				<label for="repassword">Confirmar contraseña</label>
+			<label for="repassword">Confirmar contraseña</label>
 			</p>
-			<input type="password" id="password" name="password" required="" type="text">
+	        <input type="password" placeholder="Confirmar Password" id="confirm_password" required="" tabindex="5">
 			<br>
 			<label>Fecha de nacimiento</label>
 			<fieldset>
 				<label class="month">
-					<select class="select-style" name="BirthMonth">
+					<select class="select-style" name="BirthMonth" id="BirthMonth" tabindex="6">
 						<option value="">Mes</option>
 						<option value="01">Enero</option>
 						<option value="02">Febrero</option>
@@ -92,33 +93,34 @@ body {
 						<option value="12">Deciembre</option>
 					</select>
 				</label>
-				<label>Dia<input class="birthday" maxlength="2" name="BirthDay" placeholder="Day" required=""></label>
-				<label>Año <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label>
+				<label>Dia<input class="birthday" maxlength="2" name="BirthDay" id="BirthDay" placeholder="Day" required="" tabindex="7"></label>
+				<label>Año <input class="birthyear" maxlength="4" name="BirthYear" id="BirthYear" placeholder="Year" required="" tabindex="8"></label>
 			</fieldset>
-			<input class="buttom" name="submitRegistro" id="submitRegistro" tabindex="5" value="Registrarme" type="submit" onclick="enviar_datos_registros_ajax();">
+			<input class="buttom" name="submitRegistro" id="submitRegistro" tabindex="9" value="Registrarme" type="submit" onclick="enviar_datos_registros_ajax();">
 		</form>
-		<form id="loginform" style="visibility:hidden; position:absolute; left: 49px; top: 20px;">
+		<form id="loginform" style="visibility:hidden; position:absolute; left: 269px; top: 179px; width: 625px;">
 			<p class="contact">
 				<label for="username">Nombre de usuario</label>
 			</p>
-			<input id="username" name="username" placeholder="username" required="" tabindex="2" type="text">
+			<input id="username" name="username" placeholder="username" required="" type="text">
 			<p class="contact">
 				<label for="password">Contraseña</label>
 			</p>
 			<input type="password" id="password" name="password" required="" type="text">
-			<input class="buttom" name="submitLogin" id="submitLogin" tabindex="5" value="Iniciar Sesiòn" type="submit">
-		</form>
+			<br>
+			<input class="buttom" name="submitLogin" id="submitLogin" value="Iniciar Sesiòn" type="submit">
+	  </form>
 		<p>
-		  <table width="96%" style="width:100%;" align="center">
+	  <table width="96%" style="width:100%;" align="center">
 				<tr>
 					<td width="49%" align="center">
-						<input class="buttom" id="submit" tabindex="5" value="No tengo cuenta!" type="submit" onClick="mostrarForm();">
+						<input class="buttom" id="submit" value="No tengo cuenta!" type="submit" onClick="mostrarForm();">
 					</td>
 					<td width="49%" align="center">
-						<input class="buttom" id="submit" tabindex="5" value="Tengo una cuenta!" type="submit" onClick="mostrarLogIn();">
+						<input class="buttom" id="submit" value="Tengo una cuenta!" type="submit" onClick="mostrarLogIn();">
 					</td>
 				</tr>
-		  </table>
+	  </table>
 		</p>
 	</div>
 	<br>
@@ -142,6 +144,5 @@ body {
 	</footer>
 	<!--footer end-->
 </div>
-
 </body>
 </html>
