@@ -47,10 +47,10 @@ body {
 				</div>
 				<nav>
 					<ul id="menu">
-						<li class="active"><a href="index.php"><span>Inicio</span></a></li>
+						<li><a href="index.php"><span>Inicio</span></a></li>
 						<li><a href="asistencias.php"><span>Asistencias</span></a></li>
 						<li><a href="librodetemas.php"><span>Libro de temas</span></a></li>
-						<li><a href="evaluaciones.php"><span>Evaluaciones</span></a></li>
+						<li class="active"><a href="evaluaciones.php"><span>Evaluaciones</span></a></li>
 						<li class="last"><a href="contacto.php"><span>Contacto</span></a></li>
 					</ul>
 				</nav>
