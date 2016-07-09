@@ -44,7 +44,7 @@ p {padding-bottom:24px}
 #menu > li > a {width:188px;display:block;font-size:17px;color:#fff;text-transform:uppercase;font-weight:400;height:61px;line-height:58px;border-top:1px solid #FFFFFF;background:#000;text-align:center;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;position:relative}
 #menu > li > a:hover, #menu > .active > a {background:#5f870e;border-color:#9cba2f}
 #menu > li > a span {display:block;position:relative}
-#slider {position:absolute;top:199px;left:1px;width:100%;height:467px;overflow:hidden;z-index:1}
+#slider {position:absolute;top:217px;left:1px;width:100%;height:449px;overflow:hidden;z-index:1}
 .items {display:none}
 .pagination {position:absolute;bottom:82px;right:274px;z-index:2}
 .pagination li {float:left;padding-left:3px}

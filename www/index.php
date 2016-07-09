@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['usuario']))
+{
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,23 +11,13 @@
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
-		<script type="text/javascript" src="js/cufon-yui.js"></script>
-		<script type="text/javascript" src="js/cufon-replace.js"></script>  
-		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
-		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
-		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
-		<script type="text/javascript" src="js/tms-0.3.js"></script>
-		<script type="text/javascript" src="js/tms_presets.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5.js"></script>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
 		<![endif]-->
 		<!--[if lt IE 7]>
 			<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us  				.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
 		</div>
 		<![endif]-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
@@ -40,16 +35,19 @@ body {
 		<!--header -->
 			<header class="header-index">
 				<div class="wrapper">
-					<h1><a href="index.html" id="logo">logo</a></h1>
+					<h1><a href="index.php" id="logo">logo</a></h1>
 					<form id="status" method="post">
 						<fieldset>
-							<div>Info del usuario logueado - logout</div>
+							<div id="estadoSession">
+							<p>Bienvenido: <?php echo $_SESSION['usuario']; ?></p>
+							<a href="logout.php">Cerrar Session</a>
+							</div>
 						</fieldset>
 					</form>
 				</div>
 				<nav>
 					<ul id="menu">
-						<li class="active"><a href="index.html"><span>Inicio</span></a></li>
+						<li class="active"><a href="index.php"><span>Inicio</span></a></li>
 						<li><a href="Company.html"><span>Asistencias</span></a></li>
 						<li><a href="Solutions.html"><span>Libro de temas</span></a></li>
 						<li><a href="Services.html"><span>Evaluaciones</span></a></li>
@@ -58,14 +56,10 @@ body {
 				</nav>
 				<div id="slider">	DATA ACA		</div>
 			</header>
-			<!--header end-->
-		<!--content -->
 		</div>
 		<div class="bg1">	<!-- Otra seccion eliminar si no sirve-->
 		</div>
 		<div class="main">
-		<!--content end-->
-		<!--footer -->
 		  <footer>
 				<ul id="icons">
 					<li class="first">Seginos en:</li>
@@ -77,27 +71,14 @@ body {
 			<p>Copyright © 2016 I.S.F.T. Nº 179 Dr. Carlos Pellegrini<br>
 		    All Rights Reserved</p>
 		</footer>
-		<!--footer end-->
 		</div>
-		<script type="text/javascript"> Cufon.now(); </script>
-		<script>
-			$(window).load(function(){
-				$('#slider')._TMS({
-					banners:true,
-					waitBannerAnimation:false,
-					preset:'diagonalFade',
-					easing:'easeOutQuad',
-					pagination:true,
-					duration:400,
-					slideshow:8000,
-					bannerShow:function(banner){
-						banner.css({marginRight:-500}).stop().animate({marginRight:0}, 600)
-					},
-					bannerHide:function(banner){
-						banner.stop().animate({marginRight:-500}, 600)
-					}
-					})
-			})
-		</script>
 	</body>
 </html>
+<?php
+}
+else
+{
+	header('Location : login.php');
+	echo '<script>location.href="login.php";</script>';
+}
+?>

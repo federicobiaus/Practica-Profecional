@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['usuario']))
+{
+	header('Location : index.php');
+	echo '<script>location.href="index.php";</script>';
+}
+else
+{
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,17 +18,6 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<!--<script type="text/javascript" src="js/jquery-1.6.js"></script>
-<script type="text/javascript" src="js/cufon-yui.js"></script>
-<script type="text/javascript" src="js/cufon-replace.js"></script>
-<script type="text/javascript" src="js/Vegur_300.font.js"></script>
-<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
-<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
-<script type="text/javascript" src="js/tms-0.3.js"></script>
-<script type="text/javascript" src="js/tms_presets.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/atooltip.jquery.js"></script>-->
-
 <!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5.js"></script>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
@@ -41,14 +40,11 @@ body {
 </head>
 <body id="page2">
 <div class="main">
-	<!--header -->
 	<header id="header-login">
 	<div class="wrapper">
-		<h1><a href="login.html" id="logo">logo</a></h1>
+		<h1><a href="login.php" id="logo">logo</a></h1>
 	</div>
 	</header>
-	<!--header end-->
-	<!--content -->
 	<br>
 	<br>
 	<div class="form" id="form1">
@@ -60,7 +56,7 @@ body {
 			<p class="contact">
 				<label for="email">Email</label>
 			</p>
-			<input id="email" name="email" placeholder="ejemplo@domain.com" required="" tabindex="2" type="email">
+			<input id="email" name="email" placeholder="Ejemplo@domain.com" required="" tabindex="2" type="email">
 			<p class="contact">
 				<label for="username">Nombre de usuario</label>
 			</p>
@@ -96,19 +92,21 @@ body {
 				<label>Dia<input class="birthday" maxlength="2" name="BirthDay" id="BirthDay" placeholder="Day" required="" tabindex="7"></label>
 				<label>Año <input class="birthyear" maxlength="4" name="BirthYear" id="BirthYear" placeholder="Year" required="" tabindex="8"></label>
 			</fieldset>
-			<input class="buttom" name="submitRegistro" id="submitRegistro" tabindex="9" value="Registrarme" type="submit" onclick="enviar_datos_registros_ajax();">
+			<input class="buttom" id="submitRegistro" tabindex="9" value="Registrarme" type="submit" onclick="enviar_datos_registros_ajax();">
+			<div id="resultado"></div>
 		</form>
-		<form id="loginform" style="visibility:hidden; position:absolute; left: 269px; top: 179px; width: 625px;">
+		<form id="loginform" style="visibility:hidden; position:absolute; left: 269px; top: 178px; width: 625px;">
 			<p class="contact">
 				<label for="username">Nombre de usuario</label>
 			</p>
-			<input id="username" name="username" placeholder="username" required="" type="text">
+			<input id="user" placeholder="Username" required="" type="text">
 			<p class="contact">
 				<label for="password">Contraseña</label>
 			</p>
-			<input type="password" id="password" name="password" required="" type="text">
+			<input type="password" id="pass" placeholder="Password" required="">
 			<br>
-			<input class="buttom" name="submitLogin" id="submitLogin" value="Iniciar Sesiòn" type="submit">
+			<input class="buttom" name="submitLogin" id="submitLogin" value="Iniciar Sesión" type="submit" onclick="validar_login_ajax();">
+			<p class="contact"><div id="validaLogin"> </div></p>
 	  </form>
 		<p>
 	  <table width="96%" style="width:100%;" align="center">
@@ -127,8 +125,6 @@ body {
 	<br>
 </div>
 <div class="main">
-	<!--content end-->
-	<!--footer -->
 	<footer>
 	<ul id="icons">
 		<li class="first">Seginos en:</li>
@@ -142,7 +138,9 @@ body {
 		 All Rights Reserved
 	</p>
 	</footer>
-	<!--footer end-->
 </div>
 </body>
 </html>
+<?php
+}
+?>
