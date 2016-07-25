@@ -48,7 +48,7 @@ body {
 	<br>
 	<br>
 	<div class="form" id="form1">
-		<form id="contactform">
+		<form id="contactform" style="visibility:hidden">
 			<p class="contact">
 				<label for="name">Nombre</label>
 			</p>
@@ -92,30 +92,31 @@ body {
 				<label>Dia<input class="birthday" maxlength="2" name="BirthDay" id="BirthDay" placeholder="Day" required="" tabindex="7"></label>
 				<label>Año <input class="birthyear" maxlength="4" name="BirthYear" id="BirthYear" placeholder="Year" required="" tabindex="8"></label>
 			</fieldset>
+			<br/>
 			<input class="buttom" id="submitRegistro" tabindex="9" value="Registrarme" type="submit" onclick="enviar_datos_registros_ajax();">
-			<div id="resultado"></div>
+			<div id="resultado" style="visibility:visible"></div>
 		</form>
-		<form id="loginform" style="visibility:hidden; position:absolute; left: 269px; top: 178px; width: 625px;">
+		<form id="loginform" style="visibility:visible; position:absolute; left: 269px; top: 178px; width: 625px;">
 			<p class="contact">
 				<label for="username">Nombre de usuario</label>
 			</p>
-			<input id="user" placeholder="Username" required="" type="text">
+			<input id="user" placeholder="Username o Email" required="" type="text">
 			<p class="contact">
 				<label for="password">Contraseña</label>
 			</p>
 			<input type="password" id="pass" placeholder="Password" required="">
-			<br>
+			<br><br>
 			<input class="buttom" name="submitLogin" id="submitLogin" value="Iniciar Sesión" type="submit" onclick="validar_login_ajax();">
-			<p class="contact"><div id="validaLogin"> </div></p>
+			<div id="resultado2" style="visibility:visible"></div>
 	  </form>
 		<p>
 	  <table width="96%" style="width:100%;" align="center">
 				<tr>
 					<td width="49%" align="center">
-						<input class="buttom" id="submit" value="No tengo cuenta!" type="submit" onClick="mostrarForm();">
+<!--						<input class="buttom" id="submit" value="No tengo cuenta!" type="submit" onClick="mostrarForm();">-->
 					</td>
 					<td width="49%" align="center">
-						<input class="buttom" id="submit" value="Tengo una cuenta!" type="submit" onClick="mostrarLogIn();">
+						<input class="buttom" id="cambiarBoton" value="No tengo cuenta!" type="submit" onClick="cambiarLogin(); limpiarMensajes();">
 					</td>
 				</tr>
 	  </table>

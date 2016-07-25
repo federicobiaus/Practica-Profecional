@@ -11,6 +11,20 @@ if(isset($_SESSION['usuario']))
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script type="text/javascript" src="lib/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.pikachoose.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.touchwipe.min.js"></script>
+
+		<script language="javascript">
+			$(document).ready(
+				function (){
+					$("#pikame").PikaChoose();
+				});
+		</script>
+
+
+
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5.js"></script>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
@@ -40,7 +54,7 @@ body {
 						<fieldset>
 							<div id="estadoSession">
 							<p>Bienvenido: <?php echo $_SESSION['usuario']; ?></p>
-							<a style="" href="logout.php">Cerrar Session</a></p>
+							<a href="logout.php">Cerrar Session</a></p>
 							</div>
 						</fieldset>
 					</form>
@@ -58,9 +72,18 @@ body {
 		</div>
 		<div class="content">	
 		<br>
-		<br>
-		<p>DATA ACA</p>
-		<br>
+		<div class="pikachoose">
+		<ul id="pikame" >
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/1980114_1528056914186426_7864638607357619162_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12291247_1528056917519759_6275177080787261247_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12304489_1528056770853107_1924315526406555526_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12308065_1528056920853092_4282661149067132265_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12309866_1528056764186441_8806335291984191304_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12314517_1528056634186454_2487336226603187923_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12322417_1528056774186440_2974844061092891484_o.jpg"/></a><span></span></li>
+			<li><a href="http://www.isft179.edu.ar/wpress/"><img src="images/12322860_1528056637519787_5994497168683941465_o.jpg"/></a><span></span></li>
+		</ul>
+		</div>
 		<br>				
 		</div>
 		<div class="main">

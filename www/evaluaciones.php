@@ -2,6 +2,48 @@
 session_start();
 if(isset($_SESSION['usuario']))
 {
+$encabezado='
+			<thead>
+				<tr>
+					<th>Alumnos</th>
+					<th>Nota</th>
+					<th>Nota</th>
+					<th>Nota</th>
+					<th>Nota</th>
+					<th>Final</th>
+					<th>Promedio</th>
+					<th>Estado</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>';
+			
+$detalle='			
+		<tbody>
+			<tr>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th>asd</th>
+				<th><img src="images/File-edit-icon.png" width="25" height="19">
+				<img src="images/ico-trash 2.png" width="25" height="19">
+				</th>
+			</tr>
+			<tr>
+				<th>Nombre y apellido</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th> <img src="images/user-4-add.png" width="25" height="19" onClick="agregarRegistro();"></th>
+			</tr>
+		</tbody>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +53,8 @@ if(isset($_SESSION['usuario']))
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/tablas.css" type="text/css" media="all">
+		<script type="text/javascript" src="js/asistencias.js"></script>
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5.js"></script>
 		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
@@ -57,9 +101,10 @@ body {
 			</header>
 		</div>
 		<div class="content">	
-		<br>
-		<br>
-		<p>DATA ACA</p>
+		<table class="tablaEvaluaciones">
+			<?php echo $encabezado?>
+			<?php echo $detalle?>
+		</table>
 		<br>
 		<br>				
 		</div>

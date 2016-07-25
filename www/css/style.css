@@ -38,7 +38,7 @@ p {padding-bottom:24px}
 #menu > li  {float:left;padding-right:5px}
 #menu .last {padding-right:0px} 
 #menu .last2 {padding-right:0px} 
-#menu > li > a {width:188px;display:block;font-size:17px;color:#fff;text-transform:uppercase;font-weight:400;height:61px;line-height:58px;border-top:1px solid #FFFFFF;background:#000;text-align:center;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;position:relative}
+#menu > li > a {width:188px;display:block;font-size:17px;color:#fff;text-transform:uppercase;font-weight:400;height:61px;line-height:58px;border-top:1px solid #000000;background:#000;text-align:center;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;position:relative}
 #menu > li > a:hover, #menu > .active > a {background:#5f870e;border-color:#9cba2f}
 #menu > li > a:hover, #menu > .last2 > a {background:#5f870e;border-color:#9cba2f}
 #menu > li > a span {display:block;position:relative}
@@ -105,3 +105,19 @@ footer a:hover {color:#fff}
   }
 .form input.buttom{ background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
 .form input.buttom:hover	{ background-color: #2a78f6; }
+
+.pikachoose {width: 920px; margin: 0 auto;}
+.pika-stage {position: fixed; width: 900px; height:509px; -moz-box-shadow: 10px 10px 5px #888;-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888; border:2px solid black;}
+
+	.pika-stage .pika-aniwrap, .pika-stage .main-image {position: absolute; top: 0; left: 0;}
+	.pika-stage .pika-aniwrap{width:100%;}
+	.pika-stage .pika-ani {position:relative;display: none;z-index:2;margin:0 auto;}
+	.pika-stage img {border:0px;height:100%; width:100%;}
+
+.pika-stage .caption {position: absolute; background:#000; background: rgba(0,0,0,0.75);  border: 1px solid #141414; font-size: 11px; color: #fafafa; padding: 10px; text-align: right; bottom: 0px; right: 10px;}
+	.pika-stage .caption p {padding: 0; margin: 0; line-height: 14px;}
+.pika-textnav, .pika-imgnav {display:none;}
+.pika-counter{position: absolute;bottom: -20px;left:15px;font-size:11px;}
+
+#pikame{display:none;}
