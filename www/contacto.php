@@ -48,9 +48,9 @@ body {
 				<nav>
 					<ul id="menu">
 						<li><a href="index.php"><span>Inicio</span></a></li>
-						<li><a href="asistencias.php"><span>Asistencias</span></a></li>
-						<li><a href="librodetemas.php"><span>Libro de temas</span></a></li>
-						<li><a href="evaluaciones.php"><span>Evaluaciones</span></a></li>
+						<li><a href="php/Asistencias/asistencias.php"><span>Asistencias</span></a></li>
+						<li><a href="php/LibroDeTemas/librodetemas.php"><span>Libro de temas</span></a></li>
+						<li><a href="php/Evaluaciones/evaluaciones.php"><span>Evaluaciones</span></a></li>
 						<li class="last2"><a href="contacto.php"><span>Contacto</span></a></li>
 					</ul>
 				</nav>

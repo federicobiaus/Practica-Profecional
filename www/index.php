@@ -11,7 +11,7 @@ if(isset($_SESSION['usuario']))
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-		<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="lib/jquery.jcarousel.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.pikachoose.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.touchwipe.min.js"></script>
@@ -62,9 +62,9 @@ body {
 				<nav>
 					<ul id="menu">
 						<li class="active"><a href="index.php"><span>Inicio</span></a></li>
-						<li><a href="asistencias.php"><span>Asistencias</span></a></li>
-						<li><a href="librodetemas.php"><span>Libro de temas</span></a></li>
-						<li><a href="evaluaciones.php"><span>Evaluaciones</span></a></li>
+						<li><a href="php/Asistencias/asistencias.php"><span>Asistencias</span></a></li>
+						<li><a href="php/LibroDeTemas/librodetemas.php"><span>Libro de temas</span></a></li>
+						<li><a href="php/Evaluaciones/evaluaciones.php"><span>Evaluaciones</span></a></li>
 						<li class="last"><a href="contacto.php"><span>Contacto</span></a></li>
 					</ul>
 				</nav>

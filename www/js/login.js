@@ -98,6 +98,7 @@ function enviar_datos_registros_ajax()
 			url:url,
 			data:data,
 			success:function(resp){
+				alert(resp);
 				$('#resultado').html(resp);
 			}
 		})
